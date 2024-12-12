@@ -19,6 +19,14 @@ services:
     restart: always # コンテナが停止すると常に再起動
     stdin_open: true
     tty: true
+  solid_que_worker:
+    build:
+      dockerfile: Dockerfile.dev
+    environment:
+      RAILS_ENV: development
+    command: bash -c "bin/jobs"
+    volumes:
+      - .:/app
 volumes:
   mysql_volume:
     driver: local
