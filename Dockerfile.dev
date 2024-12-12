@@ -1,0 +1,24 @@
+FROM ruby:3.3.6
+WORKDIR /app
+
+ENV LANG C.UTF-8
+
+RUN apt-get update -qq && \
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    default-libmysqlclient-dev \
+    vim
+    # libpq-dev postgresql-client
+
+
+COPY Gemfile /app/Gemfile
+COPY Gemfile.lock /app/Gemfile.lock
+
+ARG APP_BUNDLER_VER="2.5.23"
+RUN gem install bundler -v $APP_BUNDLER_VER && \
+    bundle install -j4
+
+COPY . /app
+EXPOSE 3000
+
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
