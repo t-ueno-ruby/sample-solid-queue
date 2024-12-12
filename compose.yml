@@ -2,6 +2,8 @@ services:
   db:
     image: mysql:8.0.35
     command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306
     volumes:
       - mysql_volume:/var/lib/mysql
     environment:
