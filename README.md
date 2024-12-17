@@ -13,7 +13,6 @@
 
 ## 環境構築
 
-完成形のコードは[solid-queue-mysql8](https://github.com/t-ueno-ruby/sample-solid-queue/tree/solid-queue-mysql8)ブランチをご確認ください。
 実装手順は記事で解説しています。
 
 
@@ -48,4 +47,4 @@ docker compose up
 ## 動作確認
 
 <http://localhost:3000>にアクセスするとRailsのトップページが表示されます。
-<http://localhost:3000/posts>にアクセスすると完成したアプリケーションの動作確認が可能です。
+<http://localhost:3000/posts>にアクセスして動作確認が可能です。
