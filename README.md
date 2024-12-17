@@ -54,4 +54,5 @@ docker compose up
 ## 4. 動作確認
 
 <http://localhost:3000>にアクセスするとRailsのトップページが表示されます。
+
 <http://localhost:3000/posts>にアクセスして動作確認が可能です。
