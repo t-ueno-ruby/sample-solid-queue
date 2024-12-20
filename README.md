@@ -16,3 +16,11 @@ macOSで動作確認済みです。
 ~~~bash
 git clone git@github.com:t-ueno-ruby/sample-solid-queue.git
 ~~~
+
+
+### コンテナをビルド
+
+~~~bash
+docker compose build --no-cache
+~~~
+
